@@ -1,16 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.loginui.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginui.HelloController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="CENTER">
+            <Button layoutX="68.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="26.0" prefWidth="92.0" text="Login" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0" />
+            <Button layoutX="168.0" layoutY="252.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="26.0" prefWidth="55.0" text="Clear" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="50.0" />
+            <Label layoutX="36.0" layoutY="130.0" text="Username" textAlignment="CENTER" AnchorPane.rightAnchor="208.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="logUsername" alignment="TOP_LEFT" layoutX="111.0" layoutY="125.0" promptText="username" style="-fx-background-color: white;" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="39.20000000000002">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Label layoutX="37.0" layoutY="182.0" text="Password" textAlignment="CENTER" AnchorPane.rightAnchor="208.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="logPassword" alignment="TOP_LEFT" layoutX="111.0" layoutY="176.0" promptText="password" style="-fx-background-color: white;" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="39.20000000000002">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </PasswordField>
+            <Label layoutX="121.0" layoutY="58.0" text="LOGIN">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+         <BorderPane.margin>
+            <Insets right="1.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: whitesmoke;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="1.0" />
+         </BorderPane.margin>
+
+            <Label layoutX="39.199999999999974" layoutY="68.0" text="First Name" textAlignment="CENTER" AnchorPane.leftAnchor="39.199999999999974" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstname" alignment="TOP_LEFT" layoutX="115.2" layoutY="63.0" promptText="John" style="-fx-background-color: white;" AnchorPane.leftAnchor="115.2" AnchorPane.rightAnchor="35.19999999999999">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Label layoutX="39.99999999999998" layoutY="105.0" text="Last Name" textAlignment="CENTER" AnchorPane.leftAnchor="39.199999999999974" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lastname" alignment="TOP_LEFT" layoutX="115.2" layoutY="100.0" promptText="Keels" style="-fx-background-color: white;" AnchorPane.leftAnchor="115.2" AnchorPane.rightAnchor="35.19999999999999">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Label layoutX="107.0" layoutY="21.0" text="Sign Up">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.39999999999998" layoutY="247.0" prefHeight="15.0" prefWidth="32.0" text="Email" textAlignment="RIGHT" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" alignment="TOP_LEFT" layoutX="115.2" layoutY="242.0" promptText="email address" style="-fx-background-color: white;" AnchorPane.leftAnchor="115.2" AnchorPane.rightAnchor="35.19999999999999">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Label layoutX="43.99999999999998" layoutY="284.0" prefHeight="15.0" prefWidth="54.0" text="Password" textAlignment="CENTER" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="signPassword" alignment="TOP_LEFT" layoutX="115.2" layoutY="279.0" promptText="password" style="-fx-background-color: white;" AnchorPane.leftAnchor="115.2" AnchorPane.rightAnchor="35.19999999999999">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </PasswordField>
+            <Label layoutX="39.19999999999998" layoutY="147.0" text="Age" textAlignment="CENTER" AnchorPane.leftAnchor="39.199999999999974" AnchorPane.rightAnchor="237.6">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="age" alignment="TOP_LEFT" layoutX="72.0" layoutY="141.0" prefHeight="26.0" prefWidth="50.0" promptText="age" style="-fx-background-color: white;" AnchorPane.topAnchor="141.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Label layoutX="140.79999999999995" layoutY="145.8" text="Gender" textAlignment="CENTER" AnchorPane.rightAnchor="116.80000000000001" AnchorPane.topAnchor="145.8">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="gender" alignment="TOP_LEFT" layoutX="192.0" layoutY="141.0" prefWidth="70.0" promptText="gender" style="-fx-background-color: white;" AnchorPane.rightAnchor="35.19999999999999" AnchorPane.topAnchor="141.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Label layoutX="42.39999999999998" layoutY="210.0" text="Username" textAlignment="CENTER" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="signUsername" alignment="TOP_LEFT" layoutX="113.6" layoutY="205.0" promptText="username" style="-fx-background-color: white;" AnchorPane.leftAnchor="115.2" AnchorPane.rightAnchor="35.19999999999999">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="1.0" offsetY="1.0" radius="0.0" spread="1.0" width="0.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Button layoutX="87.0" layoutY="333.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="26.0" prefWidth="100.0" text="SignUp" />
+            <Button layoutX="202.0" layoutY="333.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="26.0" prefWidth="60.0" text="Clear" />
+      </AnchorPane>
+   </right>
+</BorderPane>
