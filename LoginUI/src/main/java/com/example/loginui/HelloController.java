@@ -1,14 +1,21 @@
 package com.example.loginui;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class HelloController {
     @FXML
-    private TextField logUsername;
+    private TextField username;
 
     @FXML
-    private TextField logPassword;
+    private PasswordField password;
+
+    @FXML
+    private PasswordField confirmPassword;
+
 
     @FXML
     private TextField firstname;
@@ -20,27 +27,41 @@ public class HelloController {
     private TextField age;
 
     @FXML
-    private TextField gender;
+    private DatePicker birthday;
 
     @FXML
     private TextField email;
+
     @FXML
-    private TextField signUsername;
+    private TextField mobile;
+
     @FXML
-    private TextField signPassword;
+    private TextField civilStatus;
+
+    @FXML
+    private TextField country;
+
+    @FXML
+    private CheckBox gender1;
+
+    @FXML
+    private CheckBox gender2;
 
     @FXML
     protected void onButtonClick() {
-        logUsername.setText("");
-        logPassword.setText("");
+        birthday.setValue(null);
+        gender1.setSelected(false);
+        gender2.setSelected(false);
+        username.setText("");
         firstname.setText("");
         lastname.setText("");
         age.setText("");
-        gender.setText("");
+        mobile.setText("");
         email.setText("");
-        signPassword.setText("");
-        signUsername.setText("");
-
+        password.setText("");
+        confirmPassword.setText("");
+        civilStatus.setText("");
+        country.setText("");
 
     }
 }
